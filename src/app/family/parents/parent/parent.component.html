@@ -1,0 +1,19 @@
+<h2><strong>PARENT</strong></h2>
+
+<mat-card id="parent">
+  <mat-card-content>
+    <i *ngIf="30 < matslider.value && matslider.value < 70" class="far fa-meh"></i>
+    <i *ngIf="matslider.value <= 30" class="far fa-frown"></i>
+    <i *ngIf="matslider.value >= 70" class="far fa-smile-beam"></i>
+    <mat-slider min="0" max="100" step="1" [value]="myHappiness" #matslider (input)="input($event)"></mat-slider>
+    <h2>
+      <strong>{{ matslider.value }}</strong>
+    </h2>
+  </mat-card-content>
+</mat-card>
+
+<div class="row justify-content-center text-center">
+  <div class="col-6 child-container">
+    <app-child></app-child>
+  </div>
+</div>
