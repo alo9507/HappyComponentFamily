@@ -14,30 +14,37 @@ export class ChildComponent implements OnInit, AfterContentInit {
   public sliderValue = 50;
 
   constructor(
-    public dataBroker: DataBrokerService,
-    public happinessCalculator: HappinessCalculatorService
+    private _dataBroker: DataBrokerService,
+    private _happinessCalculator: HappinessCalculatorService
     ) { }
 
     ngOnInit() {
 
-      this.dataBroker.ParentMood$
+      this._dataBroker.ParentMood$
       .subscribe(
-        change => this.myHappiness = this.happinessCalculator.myHappiness(this.sliderValue)
+        change => this.myHappiness = this._happinessCalculator.myHappiness(this.sliderValue)
       );
 
-      this.dataBroker.GrandparentMood$
+      this._dataBroker.GrandparentMood$
       .subscribe(
-        change => this.myHappiness = this.happinessCalculator.myHappiness(this.sliderValue)
+        change => this.myHappiness = this._happinessCalculator.myHappiness(this.sliderValue)
       );
 
     }
 
    ngAfterContentInit() {
     this._containerBackground = document.querySelector('.child-container');
+
+    this._happinessCalculator.avgHappiness$
+    .subscribe(
+      avgHappiness => {
+        this._containerBackground.style.background = `rgb(81, ${this.myHappiness},168)`;
+      }
+    );
   }
 
   public input($event): void {
-    this.dataBroker.updateChildMood($event.value);
+    this._dataBroker.updateChildMood($event.value);
     this.sliderValue = $event.value;
     this._containerBackground.style.background = `rgb(81, ${$event.value},168)`;
   }
