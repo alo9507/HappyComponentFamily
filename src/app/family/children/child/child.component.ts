@@ -4,11 +4,11 @@ import { HappinessCalculatorService } from 'src/app/shared/services/happiness-ca
 
 @Component({
   selector: 'app-child',
-  templateUrl: './child.component.html',
-  styles: []
+  templateUrl: './child.component.html'
 })
 export class ChildComponent implements OnInit, AfterContentInit {
   private _containerBackground: any;
+
   public myHappiness = 50;
   public sliderValue = 50;
 

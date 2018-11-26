@@ -4,10 +4,18 @@
             <p id="title"><strong>COMPONENT FAMILIES COMMUNICATE ~ASYNCHROSOUSLY~</strong></p>
 
             <ul><strong>
+                <hr/>
+                <h3><strong>What's Going On</strong></h3>
                 <li>Set the MOOD of each family member using the SLIDER.</li>
                 <li>Families rely on each other, so Average Family Happiness effects the individual happiness of each family member
                     (according to a weighted score)</li>
-                <li>Endless possible usse cases: cross-form validation, attribute pickers, scoring systems......</li>
+                <hr/>
+                <h3><strong>How It Works</strong></h3>
+                <li>Using the Observer pattern, components at any point in the hierarchy subscribe to the data changes of their family members. Data is
+                    communicated immediately without passing props or using the Store pattern</li>
+                <hr/>
+                <h3><strong>Use Cases</strong></h3>
+                <li>Cross-form validation, complex attribute pickers, scoring systems......</li>
             </strong></ul>
         </div>
 

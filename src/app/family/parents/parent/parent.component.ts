@@ -8,7 +8,7 @@ import { HappinessCalculatorService } from 'src/app/shared/services/happiness-ca
 })
 export class ParentComponent implements OnInit, AfterContentInit {
   private _containerBackground: any;
-  public slider: any;
+
   public myHappiness = 50;
   public sliderValue = 50;
 
@@ -33,7 +33,6 @@ export class ParentComponent implements OnInit, AfterContentInit {
 
    ngAfterContentInit() {
     this._containerBackground = document.querySelector('.parent-container');
-    this.slider = document.querySelector('mat-slider');
 
     this._happinessCalculator.avgHappiness$
     .subscribe(

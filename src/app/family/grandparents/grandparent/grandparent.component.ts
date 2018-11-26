@@ -8,6 +8,7 @@ import { HappinessCalculatorService } from 'src/app/shared/services/happiness-ca
 })
 export class GrandparentComponent implements OnInit, AfterContentInit {
   private _containerBackground: any;
+
   public myHappiness = 50;
   public sliderValue = 50;
 

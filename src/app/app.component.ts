@@ -3,13 +3,12 @@ import { HappinessCalculatorService } from './shared/services/happiness-calculat
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit, AfterContentInit {
-  public avgHappiness: number;
   private _containerBackground: any;
 
+  public avgHappiness: number;
 
   constructor(private _happinessCalculator: HappinessCalculatorService) { }
 

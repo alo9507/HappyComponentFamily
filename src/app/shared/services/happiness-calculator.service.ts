@@ -53,7 +53,7 @@ export class HappinessCalculatorService {
   }
 
   public myHappiness(currentValue: number): number {
-    return Math.ceil((currentValue * 0.7) + (this._avgHappiness * 0.3));
+    return Math.ceil((currentValue * 0.85) + (this._avgHappiness * 0.15));
   }
 
 }
