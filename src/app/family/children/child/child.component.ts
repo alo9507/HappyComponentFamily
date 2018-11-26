@@ -1,7 +1,6 @@
 import { Component, OnInit, AfterContentInit, Input } from '@angular/core';
 import { DataBrokerService } from 'src/app/shared/services/data-broker.service';
 import { HappinessCalculatorService } from 'src/app/shared/services/happiness-calculator.service';
-import { BaseFamilyMemberComponent } from '../../base-family-member/base-family-member.component';
 
 @Component({
   selector: 'app-child',

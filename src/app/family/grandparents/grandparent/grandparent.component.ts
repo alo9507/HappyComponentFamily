@@ -1,5 +1,4 @@
 import { Component, OnInit, AfterContentInit } from '@angular/core';
-import { BaseFamilyMemberComponent } from '../../base-family-member/base-family-member.component';
 import { DataBrokerService } from 'src/app/shared/services/data-broker.service';
 import { HappinessCalculatorService } from 'src/app/shared/services/happiness-calculator.service';
 

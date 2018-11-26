@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { DataBrokerService } from './data-broker.service';
-import { BaseFamilyMemberComponent } from 'src/app/family/base-family-member/base-family-member.component';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { Observable } from 'rxjs/internal/Observable';
 
