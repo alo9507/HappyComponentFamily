@@ -49,4 +49,8 @@ export class ChildComponent implements OnInit, AfterContentInit {
     this._containerBackground.style.background = `rgb(81, ${$event.value},168)`;
   }
 
+  public change($event): void {
+    this.sliderValue = $event.value;
+  }
+
 }

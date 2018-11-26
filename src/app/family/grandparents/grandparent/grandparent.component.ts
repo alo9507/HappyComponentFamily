@@ -47,4 +47,8 @@ export class GrandparentComponent implements OnInit, AfterContentInit {
     this.sliderValue = $event.value;
   }
 
+  public change($event): void {
+    this.sliderValue = $event.value;
+  }
+
 }
